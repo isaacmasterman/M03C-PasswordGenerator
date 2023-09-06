@@ -1,4 +1,64 @@
 // Assignment code here
+function generatePassword() {
+  
+  // Define character sets
+  const lowerCaseChars = "abcdefghijklmnopqrstuvwxyz";
+  const upperCaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const numberChars = "0123456789";
+  const specialChars = " !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
+
+  // Ask user for password length
+  let passwordLength = parseInt(prompt("How many characters would you like your password length to contain?"));
+
+  // Validate password length
+  while (passwordLength < 8 || passwordLength > 128 || isNaN(passwordLength)) {
+    alert("Please enter a valid number between 8 and 128.");
+    passwordLength = parseInt(prompt("Choose a password length between 8 and 128 characters:"));
+  }
+
+  function getAvailableChars() {
+    let availableChars = "";
+    // Ask user for character types
+    const includeLowerCase = confirm("Do you want to include lowercase characters?");
+    const includeUpperCase = confirm("Do you want to include uppercase characters?");
+    const includeNumbers = confirm("Do you want to include numbers?");
+    const includeSpecialChars = confirm("Do you want to include special characters?");
+
+    // Append selected character sets to available characters
+    if (includeLowerCase) {
+      availableChars += lowerCaseChars;
+    }
+    if (includeUpperCase) {
+      availableChars += upperCaseChars;
+    }
+    if (includeNumbers) {
+      availableChars += numberChars;
+    }
+    if (includeSpecialChars) {
+      availableChars += specialChars;
+    }
+
+    // Validate that at least one character type is selected
+    if (availableChars === "") {
+      alert("You must select at least one character type.");
+      return getAvailableChars();
+    }
+
+    return availableChars;
+  }
+
+  // Usage:
+  let availableCharacters = getAvailableChars();
+
+  // Generate the password
+  let generatedPassword = "";
+  for (let i = 0; i < passwordLength; i++) {
+    const randomIndex = Math.floor(Math.random() * availableCharacters.length);
+    generatedPassword += availableCharacters[randomIndex];
+  }
+
+  return generatedPassword;
+}
 
 
 // Get references to the #generate element
