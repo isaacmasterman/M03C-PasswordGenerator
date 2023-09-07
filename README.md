@@ -12,7 +12,7 @@ This project is a simple yet powerful password generator, designed to create sec
 
 ## Installation
 
-To view the portfolio, simply navigate to the deployed website. For a local copy, clone the repository and open the `index.html` file in a web browser.
+To view the password generator, simply navigate to the deployed website. For a local copy, clone the repository and open the `index.html` file in a web browser.
 
 ## Usage
 
@@ -20,7 +20,7 @@ To view the portfolio, simply navigate to the deployed website. For a local copy
 2. Follow the on-screen prompts to select your password criteria.
 3. Once all prompts are answered, your password will be displayed.
 
-Visit the deployed website: [Isaac's Portfolio](https://isaacmasterman.github.io/M03C-PasswordGenerator/)
+Visit the deployed website: [Password Generator](https://isaacmasterman.github.io/M03C-PasswordGenerator/)
 
 ![Password Generator Screenshot](./Assets/screenshot/PasswordGenerator-screenshot-01.png)
 
