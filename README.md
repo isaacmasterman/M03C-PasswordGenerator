@@ -7,7 +7,7 @@ This project is a simple yet powerful password generator, designed to create sec
 - **Motivation**: The motivation behind this project was to create a tool that can generate strong, secure passwords, thereby enhancing online security.
 - **Purpose**: This project aims to solve the problem of weak, easily guessable passwords by providing a utility that generates strong, unique passwords.
 - **Problem it Solves**: It offers a quick and easy way for users to create secure passwords, thus enhancing their online security.
-- **What I Learned**: Through this project, I gained deeper insights into JavaScript, especially in areas like loops, conditionals, and string manipulation. I also learned how to make a more user-friendly interface.
+- **What I Learned**: Through this project, I gained deeper insights into JavaScript, especially in areas like loops, conditionals, and string manipulation.
 
 
 ## Installation
