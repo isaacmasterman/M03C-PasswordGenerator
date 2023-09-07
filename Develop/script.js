@@ -19,10 +19,10 @@ function generatePassword() {
   function getAvailableChars() {
     let availableChars = "";
     // Ask user for character types
-    const includeLowerCase = confirm("Do you want to include lowercase characters?");
-    const includeUpperCase = confirm("Do you want to include uppercase characters?");
-    const includeNumbers = confirm("Do you want to include numbers?");
-    const includeSpecialChars = confirm("Do you want to include special characters?");
+    includeLowerCase = confirm("Do you want to include lowercase characters?");
+    includeUpperCase = confirm("Do you want to include uppercase characters?");
+    includeNumbers = confirm("Do you want to include numbers?");
+    includeSpecialChars = confirm("Do you want to include special characters?");
 
     // Append selected character sets to available characters
     if (includeLowerCase) {
@@ -47,7 +47,7 @@ function generatePassword() {
     return availableChars;
   }
 
-  // Usage:
+  // Usage
   let availableCharacters = getAvailableChars();
 
   // Generate the password
@@ -57,6 +57,24 @@ function generatePassword() {
     generatedPassword += availableCharacters[randomIndex];
   }
 
+  // Validate that all selected character types are included
+  function isValidPassword(password) {
+    if (includeLowerCase && !password.split('').some(char => lowerCaseChars.includes(char))) return false;
+    if (includeUpperCase && !password.split('').some(char => upperCaseChars.includes(char))) return false;
+    if (includeNumbers && !password.split('').some(char => numberChars.includes(char))) return false;
+    if (includeSpecialChars && !password.split('').some(char => specialChars.includes(char))) return false;
+    return true;
+  }
+
+
+  while (!isValidPassword(generatedPassword)) {
+    generatedPassword = "";
+    for (let i = 0; i < passwordLength; i++) {
+        const randomIndex = Math.floor(Math.random() * availableCharacters.length);
+        generatedPassword += availableCharacters[randomIndex];
+    }
+  }
+  
   return generatedPassword;
 }
 
