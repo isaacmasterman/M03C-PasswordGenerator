@@ -66,7 +66,6 @@ function generatePassword() {
     return true;
   }
 
-
   while (!isValidPassword(generatedPassword)) {
     generatedPassword = "";
     for (let i = 0; i < passwordLength; i++) {
