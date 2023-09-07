@@ -22,7 +22,7 @@ To view the portfolio, simply navigate to the deployed website. For a local copy
 
 Visit the deployed website: [Isaac's Portfolio](https://isaacmasterman.github.io/M03C-PasswordGenerator/)
 
-![Password Generator Screenshot](screenshot/PasswordGenerator-screenshot-01.png)
+![Password Generator Screenshot](./Assets/screenshot/PasswordGenerator-screenshot-01.png)
 
 ## Credits
 
