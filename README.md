@@ -15,6 +15,8 @@ The Password Generator is a crucial tool in today's digital age, where data brea
 2. Follow the on-screen prompts to select your password criteria.
 3. Once all prompts are answered, your password will be displayed.
 
+![Password Generator Screenshot](screenshot/PasswordGenerator-screenshot-01.png)
+
 ## License
 
 This project is licensed under the terms of the MIT license.
